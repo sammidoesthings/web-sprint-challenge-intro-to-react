@@ -10,6 +10,9 @@ const App = () => {
 
   const [charInfo, setCharInfo] = useState([]);
 
+  // const [isOpen, setIsOpen] = useState(false);
+  // const toggle = () => setIsOpen(!isOpen)
+
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
@@ -25,12 +28,10 @@ const App = () => {
         });
     },[]
     );
-
-
   
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">STAR WARS CHARACTER LIST</h1>
     {charInfo.map(eachChar => {
       return <Character key = {eachChar.id} info = {eachChar}/>
   })

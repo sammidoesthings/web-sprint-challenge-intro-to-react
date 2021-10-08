@@ -1,22 +1,39 @@
 // Write your Character component here
 
-import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
-
+import {useState} from 'react' 
+import '../App.css'
+import {Title, Details, Button, Card } from './styles'
 
 export default function Character({info}) {
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    console.log(isOpen)
     return (
         <div>
-            <h2>{info.name}</h2>
-            <h3>Gender: {info.gender}</h3>
-            <h3>Height: {info.height}</h3>
-            <h3>Mass: {info.mass}</h3>
-            <h3>Birth Year: {info.birth_year}</h3>
-            <h3>Eye Color: {info.eye_color}</h3>
-            <h3>Hair Color: {info.hair_color}</h3>
-            <h3>Skin Color: {info.skin_color}</h3>
+            <Card className="card">
+                <div className="title">
+                    <Button onClick={() => setIsOpen(!isOpen)}>
+                        <Title>{info.name}</Title>
+                    </Button>
+                </div>
+
+                <div className="details">
+                    {isOpen && 
+                        <Details isOpen={isOpen}>
+                            <p>Gender: {info.gender}</p>
+                            <p>Height: {info.height}</p>
+                            <p>Mass: {info.mass}</p>
+                            <p>Birth Year: {info.birth_year}</p>
+                            <p>Eye Color: {info.eye_color}</p>
+                            <p>Hair Color: {info.hair_color}</p>
+                            <p>Skin Color: {info.skin_color}</p>
+                        </Details> 
+                    }
+                </div>
+            </Card>
         </div>
     )
 }
+
