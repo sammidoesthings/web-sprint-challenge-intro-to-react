@@ -11,36 +11,40 @@ export default function Character({info}) {
 
     console.log(isOpen)
     return (
-        <div>
-            <Card className="card">
-                <div className="title" className="left">
-                    <Button onClick={() => setIsOpen(!isOpen)}>
-                        <Title>{info.name}</Title>
-                    </Button>
-                </div>
+        <div className="app-container">
 
-                <div className="details" className="right">
-                    {isOpen && 
-                        <Details isOpen={isOpen}>
-                            <div>
-                                <p>Gender: {info.gender}</p>
-                                <p>Birth Year: {info.birth_year}</p>
-                            </div>
-                            <Line></Line>
-                            <div>
-                                <p>Eye Color: {info.eye_color}</p>
-                                <p>Hair Color: {info.hair_color}</p>
-                                <p>Skin Color: {info.skin_color}</p>
-                            </div>
-                            <Line></Line>
-                            <div>
-                                <p>Height: {info.height}</p>
-                                <p>Mass: {info.mass}</p>
-                            </div>
-                        </Details> 
-                    }
-                </div>
-            </Card>
+            
+            <div className="card-container">
+                <Card className="card">
+                    <div className="title" className="left">
+                        <Button onClick={() => setIsOpen(!isOpen)}>
+                            <Title>{info.name}</Title>
+                        </Button>
+                    </div>
+
+                    <div className="details" className="right">
+                        {isOpen && 
+                            <Details isOpen={isOpen}>
+                                <div>
+                                    <p>Gender: {info.gender}</p>
+                                    <p>Birth Year: {info.birth_year}</p>
+                                </div>
+                                <Line></Line>
+                                <div>
+                                    <p>Eye Color: {info.eye_color}</p>
+                                    <p>Hair Color: {info.hair_color}</p>
+                                    <p>Skin Color: {info.skin_color}</p>
+                                </div>
+                                <Line></Line>
+                                <div>
+                                    <p>Height: {info.height}</p>
+                                    <p>Mass: {info.mass}</p>
+                                </div>
+                            </Details> 
+                        }
+                    </div>
+                </Card>
+            </div>
         </div>
     )
 }

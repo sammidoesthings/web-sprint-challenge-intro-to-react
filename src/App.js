@@ -31,11 +31,15 @@ const App = () => {
   
   return (
     <div className="App">
-      <h1 className="Header">STAR WARS CHARACTER LIST</h1>
-    {charInfo.map(eachChar => {
-      return <Character key = {eachChar.id} info = {eachChar}/>
-  })
-}
+      <div>
+        <h1 className="Header">STAR WARS CHARACTER LIST</h1>
+      </div>
+      <div>
+        {charInfo.map(eachChar => {
+          return <Character key = {eachChar.id} info = {eachChar}/>
+          })
+        }
+      </div>
     </div>
     );
 }
