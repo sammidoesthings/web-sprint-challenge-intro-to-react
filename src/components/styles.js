@@ -7,10 +7,16 @@ const Title = styled.h1`
 `;
 
 const Details = styled.h3`
-    display: block;
+    /* display: block; */
     line-height: 1.5;
     font-size: smaller;
     font-family: 'Raleway', sans-serif;
+    text-align: center;
+    //flexbox
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 `;
 
 const Button = styled.button` 
@@ -19,13 +25,24 @@ const Button = styled.button`
     background: none;
     height: 7rem;
     width: 7rem;
+    margin: 0 3rem;
 `;
 
 const Card = styled.div` 
     margin: 30 auto;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    height: 10rem;
+`;
+
+const Line = styled.hr` 
+    margin: 0 1rem;
+    height: 7rem;
 `;
 
 
 
-export { Title, Details, Button, Card }
+export { Title, Details, Button, Card, Line }
