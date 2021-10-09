@@ -29,13 +29,13 @@ const Button = styled.button`
 `;
 
 const Card = styled.div` 
-    margin: 30 auto;
+    margin: 20 auto;
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-content: space-between;
     align-items: center;
-    height: 10rem;
+    height: 8rem;
 `;
 
 const Line = styled.hr` 

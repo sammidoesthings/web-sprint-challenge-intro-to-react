@@ -3,8 +3,9 @@
 }
 .Header {
   color: #f9d71c;
-  text-shadow: 1px 1px 5px #444444;
+  text-shadow: 1px 1px 5px #ffeb7ab0;
   font-family: 'Ranchers', sans-serif;
+  font-size: 5rem;
 }
 /* write your parent styles in here for your App.js */
 body {
@@ -16,6 +17,6 @@ body {
   border: solid red 3px;
 } */
 
-.details div {
+.hr {
   margin-right: 13rem;
 }
